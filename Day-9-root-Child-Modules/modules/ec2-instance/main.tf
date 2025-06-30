@@ -3,8 +3,7 @@ provider "aws" {
 }
 module "web_instance" {
   source        = "./modules/ec2-instance"
-  ami_id        = "ami-05ffe3c48a9991133"
-  instance_type = "t2.micro"
-  instance_name = "WebServer"
-
+  ami_id        = var.ami
+  instance_type = var.instance_type
+  instance_name = var.instance_name
 }
