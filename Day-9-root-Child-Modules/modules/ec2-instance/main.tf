@@ -1,6 +1,4 @@
-provider "aws" {
 
-}
 module "web_instance" {
   source        = "./modules/ec2-instance"
   ami_id        = var.ami
