@@ -4,7 +4,7 @@ provider "aws" {
 
 # S3 Bucket to Store Lambda Code
 resource "aws_s3_bucket" "lambda_bucket" {
-  bucket        = "my-lambda-bucket-unique-name-nareshit"
+  bucket        = "my-lambda-bucket-unique-name-dhruv"
   acl           = "private"
   force_destroy = true
 
