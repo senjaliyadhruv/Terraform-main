@@ -18,7 +18,7 @@ resource "aws_instance" "name" {
 ############################### Example-2 Different names #############
 # variable "env" {
 #   type    = list(string)
-#   default = ["dev", "test", "prod"]
+#   default = ["dev", "test", "prod"] # # ["dev", "test", "prod"] when we delete "test" then prod will delete and test name will be modified as prod.
 # }
 
 # resource "aws_instance" "name" {
