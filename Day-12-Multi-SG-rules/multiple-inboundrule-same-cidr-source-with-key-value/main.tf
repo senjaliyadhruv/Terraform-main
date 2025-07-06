@@ -35,4 +35,3 @@ resource "aws_security_group" "devops_project_veera" {
     Name = "devops-project-veera"
   }
 }
-
