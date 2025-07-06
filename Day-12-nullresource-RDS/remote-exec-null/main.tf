@@ -2,7 +2,7 @@
 resource "aws_instance" "sql_runner" {
   ami                         = "ami-0c02fb55956c7d316" # Amazon Linux 2
   instance_type               = "t2.micro"
-  key_name                    = "my-key" # Replace with your key pair name
+  key_name                    = "ec2-key" # Replace with your key pair name
   associate_public_ip_address = true
 
   tags = {
@@ -17,7 +17,7 @@ resource "null_resource" "remote_sql_exec" {
   connection {
     type        = "ssh"
     user        = "ec2-user"
-    private_key = file("~/.ssh/my-key.pem") # Replace with your PEM file path
+    private_key = file("~/.ssh/ec2-key.pem") # Replace with your PEM file path
     host        = aws_instance.sql_runner.public_ip
   }
 
