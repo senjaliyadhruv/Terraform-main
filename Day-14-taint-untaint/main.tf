@@ -134,3 +134,20 @@ resource "aws_instance" "pvt_instance" {
     Name = "CustomPrivateInstance"
   }
 }
+
+#if we want to taint any resource then we can use this command : 
+# terraform taint <resource_type>.<resource_name>
+# for example:
+#! terraform taint aws_instance.pvt_instance
+# use of taint command is to mark a resource for recreation in the next apply
+# it means that the resource will be destroyed and recreated in every time terraform apply.
+
+# if we want to untaint any resource then we can use this command :
+#! terraform untaint <resource_type>.<resource_name>
+
+
+# after terraform 1.1 version, we can use -replace command instead of taint command
+# terraform replace is the modern alternative of the taint
+# for example:
+#! terraform apply -replace aws_instance.pvt_instance
+# this command will recreate the resource without marking it as tainted
