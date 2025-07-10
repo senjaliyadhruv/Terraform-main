@@ -33,5 +33,5 @@ resource "aws_s3_bucket" "test" {
 
 # if we want to delete from terraform state and keep in the remote then we can use this command to delete from state ony
 # for example we want to delete secrets from terraform state and keep in the remote because secrets already configure in remote (rds),
-# terraform state rm aws_secretsmanager_secret.my_secret
-# terraform state rm aws_secretsmanager_secret_version.my_secret_version
+#! terraform state rm aws_secretsmanager_secret.my_secret
+#! terraform state rm aws_secretsmanager_secret_version.my_secret_version
