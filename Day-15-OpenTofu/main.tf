@@ -4,6 +4,7 @@
 #only changes are like tofu instead of terraform
 # terraform init --> tofu init
 # terraform plan --> tofu plan
+# terraform apply --> tofu apply
 resource "aws_instance" "question" {
   ami           = "ami-00a929b66ed6e0de6"
   instance_type = "t2.micro"
